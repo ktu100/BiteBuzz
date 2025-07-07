@@ -32,7 +32,7 @@ const CheckoutPage = () => {
       if (paymentStatus === 'success' && sessionId) {
         
         axios.post(
-          'http://localhost:4000/api/orders/confirm',
+          'https://bitebuzz-backend-9ex9.onrender.com/api/orders/confirm',
           { sessionId },
           { headers: authHeaders }
         )
@@ -85,7 +85,7 @@ const CheckoutPage = () => {
       if (formData.paymentMethod === 'online') {
         
         const { data } = await axios.post(
-          'http://localhost:4000/api/orders',
+          'https://bitebuzz-backend-9ex9.onrender.com/api/orders',
           payload,
           { headers: authHeaders }
         );
@@ -94,7 +94,7 @@ const CheckoutPage = () => {
       } else {
         
         const { data } = await axios.post(
-          'http://localhost:4000/api/orders',
+          'https://bitebuzz-backend-9ex9.onrender.com/api/orders',
           payload,
           { headers: authHeaders }
         );

@@ -12,7 +12,7 @@ import {
   FaCheckCircle,
 } from 'react-icons/fa';
 
-const url = 'http://localhost:4000'
+const url = 'https://bitebuzz-backend-9ex9.onrender.com'
 
 const Login = ({ onLoginSuccess, onClose }) => {
   const [formData, setFormData] = useState({

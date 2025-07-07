@@ -60,7 +60,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     axios
-      .get('http://localhost:4000/api/cart', {
+      .get('https://bitebuzz-backend-9ex9.onrender.com/api/cart', {
         withCredentials: true,
         headers: { Authorization: `Bearer ${token}` },
       })
@@ -71,7 +71,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = useCallback(async (item, qty) => {
     const token = localStorage.getItem('authToken');
     const res = await axios.post(
-      'http://localhost:4000/api/cart',
+      'https://bitebuzz-backend-9ex9.onrender.com/api/cart',
       { itemId: item._id, quantity: qty },
       { withCredentials: true, headers: { Authorization: `Bearer ${token}` } }
     );
@@ -81,7 +81,7 @@ export const CartProvider = ({ children }) => {
   const updateQuantity = useCallback(async (_id, qty) => {
     const token = localStorage.getItem('authToken');
     const res = await axios.put(
-      `http://localhost:4000/api/cart/${_id}`,
+      `https://bitebuzz-backend-9ex9.onrender.com/api/cart/${_id}`,
       { quantity: qty },
       { withCredentials: true, headers: { Authorization: `Bearer ${token}` } }
     );
@@ -92,7 +92,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = useCallback(async _id => {
     const token = localStorage.getItem('authToken');
     await axios.delete(
-      `http://localhost:4000/api/cart/${_id}`,
+      `https://bitebuzz-backend-9ex9.onrender.com/api/cart/${_id}`,
       { withCredentials: true, headers: { Authorization: `Bearer ${token}` } }
     );
     dispatch({ type: 'REMOVE_ITEM', payload: _id });
@@ -101,7 +101,7 @@ export const CartProvider = ({ children }) => {
   const clearCart = useCallback(async () => {
     const token = localStorage.getItem('authToken');
     await axios.post(
-      'http://localhost:4000/api/cart/clear',
+      'https://bitebuzz-backend-9ex9.onrender.com/api/cart/clear',
       {},
       { withCredentials: true, headers: { Authorization: `Bearer ${token}` } }
     );
