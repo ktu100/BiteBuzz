@@ -22,7 +22,7 @@ const port=(process.env.PORT || 4000);
 app.use(
     cors({
         origin: (origin, callback) => {
-            const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174'];
+            const allowedOrigins = ['https://bitebuzz-fronntendd.onrender.com', 'https://bitebuzz-admin.onrender.com'];
             if (!origin || allowedOrigins.includes(origin)) {
                 callback(null, true);
             } else {

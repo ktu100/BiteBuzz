@@ -12,6 +12,8 @@ import VerifyPayment from './pages/VerifyPayment/VerifyPayment';
 import CheckoutPage from './pages/ChecoutPage/CheckoutPage';
 import MyOrderPage from './pages/MyOrderPage/MyOrderPage';
 
+//https://bitebuzz-fronntendd.onrender.com
+
 const App = () => {
   return (
     <Routes>
