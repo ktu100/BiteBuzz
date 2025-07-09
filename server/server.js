@@ -16,7 +16,7 @@ import orderRouter from './routes/orderRoute.js';
 //https://bitebuzz-backend-9ex9.onrender.com
 
 const app=express();
-const port=(process.env.PORT || 4000);
+const port=(process.env.PORT);
 
 //Middleware
 app.use(
